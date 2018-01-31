@@ -1,5 +1,5 @@
 box:
-  id: store/oracle/serverjre
+  id: openjdk:alpine
   username: $DOCKER_USERNAME
   password: $DOCKER_PASSWORD
   tag: 8
