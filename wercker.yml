@@ -10,3 +10,11 @@ build:
       name: Build
       code: 
         echo "Hello World!"
+
+dev:
+  steps:
+    - script:
+      name: Dev
+      code: 
+        echo "Hello Dev World!"
+#    - internal/shell
