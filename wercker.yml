@@ -18,3 +18,10 @@ dev:
       code: 
         echo "Hello Dev World!"
 #    - internal/shell
+
+cleanup:
+  steps:
+    - script:
+      name: Cleanup
+      code: 
+        echo "Hello Cleanup World!"
