@@ -1,5 +1,5 @@
 box:
-  id: openjdk:alpine
+  id: openjdk
   username: $DOCKER_USERNAME
   password: $DOCKER_PASSWORD
   tag: 8
@@ -17,7 +17,7 @@ dev:
       name: Dev
       code: 
         echo "Hello Dev World!"
-#    - internal/shell
+    - internal/shell
 
 cleanup:
   steps:
