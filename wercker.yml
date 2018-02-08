@@ -4,6 +4,9 @@ box:
   password: $DOCKER_PASSWORD
   tag: 8
 
+services:
+    - mongo
+
 build:
   steps:
     - script:
@@ -17,7 +20,16 @@ dev:
       name: Dev
       code: 
         echo "Hello Dev World!"
-    - internal/shell
+        echo "Hello Dev World again!"
+    - lkschneider/wercker-hello-step@0.1.3 "https://github.com/lkschneider/wercker-hello-step/archive/master.tar.gz":
+      myname: "linda"
+    - script:
+      name: export
+      code:
+        export;
+        echo "Writing file to /pipeline/output/file.out";
+        echo "OUTPUT" > /pipeline/output/file.out;
+#    - internal/shell
 
 cleanup:
   steps:
